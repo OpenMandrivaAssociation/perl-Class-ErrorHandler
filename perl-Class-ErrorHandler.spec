@@ -12,7 +12,6 @@ Group:		Development/Perl
 Source0:	%{module}-%{version}.tar.bz2
 Url:		http://search.cpan.org/dist/%{module}
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Class::ErrorHandler provides an error-handling mechanism that's generic enough
