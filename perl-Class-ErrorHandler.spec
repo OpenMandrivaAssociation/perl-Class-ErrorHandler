@@ -1,18 +1,18 @@
-%define module	Class-ErrorHandler
-%define name	perl-%{module}
-%define version	0.01
-%define	release	%mkrel 5
+%define upstream_name	 Class-ErrorHandler
+%define upstream_version 0.01
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Base class for error handling
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source0:	%{module}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{module}
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Class::ErrorHandler provides an error-handling mechanism that's generic enough
@@ -21,7 +21,7 @@ its two error-handling methods, error and errstr, to communicate error messages
 back to the calling program.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
@@ -42,4 +42,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README
 %{perl_vendorlib}/Class/*
 %{_mandir}/*/*
-
