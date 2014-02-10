@@ -22,14 +22,14 @@ back to the calling program.
 %setup -qn %{upstream_name}-%{upstream_version}
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
-%make
+%__perl Build.PL installdirs=vendor
+./Build
 
 %check
-%make test
+./Build test
 
 %install
-%makeinstall_std
+./Build install destdir=%{buildroot}
 
 %files
 %doc Changes README
