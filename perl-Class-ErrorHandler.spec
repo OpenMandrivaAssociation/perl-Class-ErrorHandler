@@ -33,7 +33,7 @@ back to the calling program.
 ./Build install destdir=%{buildroot}
 
 %files
-%doc Changes README
+%doc Changes 
 %{perl_vendorlib}/Class/*
 %{_mandir}/man3/*
 
