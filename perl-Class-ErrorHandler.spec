@@ -1,14 +1,14 @@
 %define upstream_name	 Class-ErrorHandler
-%define upstream_version 0.01
+%define upstream_version 0.03
 
 Summary:	Base class for error handling
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	11
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	http://www.cpan.org/modules/by-module/Class/Class-ErrorHandler-%{upstream_version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
 
@@ -35,4 +35,5 @@ back to the calling program.
 %doc Changes README
 %{perl_vendorlib}/Class/*
 %{_mandir}/man3/*
+
 
