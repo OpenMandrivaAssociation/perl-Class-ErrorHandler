@@ -11,6 +11,7 @@ Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Class/Class-ErrorHandler-%{upstream_version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
+BuildRequires: perl(Module::Build)
 
 %description
 Class::ErrorHandler provides an error-handling mechanism that's generic enough
