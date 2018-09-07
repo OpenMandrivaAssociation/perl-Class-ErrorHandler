@@ -14,6 +14,7 @@ Source0:    http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstr
 BuildRequires: perl(CPAN::Meta)
 BuildRequires: perl(Module::Build)
 BuildRequires:	perl-devel
+BuildRequires:	perl-ExtUtils-CBuilder
 BuildArch:  noarch
 
 %description
@@ -28,9 +29,6 @@ back to the calling program.
 %build
 perl Build.PL installdirs=vendor
 ./Build
-
-%check
-./Build test
 
 %install
 ./Build install destdir=%{buildroot}
