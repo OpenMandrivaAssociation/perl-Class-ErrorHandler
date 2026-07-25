@@ -1,15 +1,15 @@
 %define upstream_name	 Class-ErrorHandler
-%define upstream_version 0.03
+%define upstream_version 0.04
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    8
+Version:    %{upstream_version}
+Release:    1
 
 Summary:    Base class for error handling
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.gz
+Url:        https://github.com/tokuhirom/Class-ErrorHandler
+Source0:    https://cpan.metacpan.org/authors/id/T/TO/TOKUHIROM/Class-ErrorHandler-%{upstream_version}.tar.gz
 
 BuildRequires: perl(CPAN::Meta)
 BuildRequires: perl(Module::Build)
