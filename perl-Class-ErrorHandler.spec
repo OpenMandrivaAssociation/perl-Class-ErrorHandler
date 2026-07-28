@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %{upstream_version}
-Release:    1
+Release:    3
 
 Summary:    Base class for error handling
 License:    GPL+ or Artistic
@@ -27,11 +27,10 @@ back to the calling program.
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-perl Build.PL installdirs=vendor
-./Build
-
+perl Makefile.PL INSTALLDIRS=vendor
+%make_build
 %install
-./Build install destdir=%{buildroot}
+%make_install
 
 %files
 %doc Changes META.yml MYMETA.yml README.md
